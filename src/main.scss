@@ -1,0 +1,1110 @@
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@mixin breakpoint($width){
+	@if $width == 'tablet'{
+		@media screen and (min-width: 769px){ @content; }
+	}
+	@if $width == 'desktop'{
+		@media screen and (min-width: 1025px){ @content; }
+	}
+	@if $width =='mobile'{
+		@media screen and (min-width: 376px){ @content; }
+	}
+}
+
+.c-card__customer-story-template--body p:first-child::first-letter{
+	padding: 0;
+    float: none;
+    margin-right: 0;
+    margin-bottom: 0px;
+    font-size: inherit;
+    line-height: inherit;
+    background: transparent;
+    color: inherit;
+    font-weight: inherit;
+}
+
+.l-container__global {
+    background: #f2f2f2;
+}
+
+.l-panel.l-panel__customer-story-template {
+    background: #F2F2F2;
+    overflow: visible;
+    height: auto;
+    z-index: 10;
+}
+
+.c-card__customer-story-template--body{
+	width: 100%;
+	background-color: none;
+}
+
+.c-card__customer-story-template--share{
+	display: none;
+}
+
+.c-card__customer-story-template--header{
+	display: none;
+    margin-top: initial;
+    background: #ffffff;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: initial;
+    width: 100%;
+}
+
+.l-panel__hero--short,
+.l-container__global .l-panel__hero--short {
+    height: 400px;
+    min-height: 325px;  
+    background-image: url(https://msenterprise.global.ssl.fastly.net/wordpress/2016/11/1440-hero-2.jpg) !important;
+	
+	@include breakpoint(mobile){
+		height: 575px;
+	}
+
+    @include breakpoint(desktop){
+    	height: 87vh;
+    }
+}
+
+$text-grey: #737373;
+$light-grey: #D2D2D2;
+$main-blue: #0078D7;
+$main-purple: #5C2D91;
+$main-yellow: #FFB900;
+$main-red: #D83B01;
+$main-green: #008272;
+$white: #ffffff;
+
+.header-text{
+	color: #ffffff;
+    position: absolute;
+    max-width: 960px;
+    width: 100%;
+    height: 500px;
+    text-align: left;
+    padding: 0 10%;
+    margin-top: -365px;
+
+    @include breakpoint(mobile){
+    	margin-top: -500px;
+    }
+
+    @include breakpoint(desktop){
+    	margin-top: -60vh;
+    }
+
+	p{
+		font-family: 'Segoe UI';
+	    font-size: 1em;
+		color: $white;
+	    padding: 0;
+	    font-weight: 100;
+	    -webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+
+	    @include breakpoint(desktop){
+	    	font-size: 1.5em;
+	    }
+	}
+
+	h1{
+		font-size: 1.8em;
+		color: #ffffff;
+    	line-height: 1.2em;
+	    -webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+
+    	br{
+    		display: none;
+    	}
+
+    	@include breakpoint(mobile){
+			font-size: 2.9em;
+    	}
+
+    	@include breakpoint(desktop){
+	    	font-size: 4.2em;
+	    	display: block;
+	    }
+	}
+
+	span.accent{
+	    width: 85px;
+	    border-top: 2px solid #FFB900;
+	    height: 10px;
+	    margin-right: 24px;
+	    transition: width 1s ease-in-out 100ms;
+	    -webkit-transition: width 1s ease-in-out 100ms;
+	    display: block;
+	    padding-bottom: 1.2em;
+
+	    @include breakpoint(tablet){
+		    display: inline-block;
+		    padding-bottom: 0;
+	    }
+	}
+
+	a{
+		padding: 1em 3em;
+		border: 1px solid $main-blue;
+		font-size: 0.7em;
+		top: 2em;
+		position: relative;
+		color: $white;
+		-webkit-font-smoothing: subpixel-antialiased;
+		letter-spacing: 0.1em;
+
+		.start-here{
+			display: inline-block;
+			color: $white;
+			font-size: 1em;
+		}
+	}
+}
+
+.c-card__customer-story-template--body a:hover{
+	color: $white;
+}
+
+.customer-story-wrapper{
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	&:focus{
+		outline: none;
+	}
+
+	p, h2, li{
+		font-family: 'Segoe UI';
+	    line-height: 1.5em;
+	    font-weight: 100;
+	    -webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	h2{
+		font-size: 2em;
+	    line-height: 1.4em;
+	}
+
+	p.divider-paragraph{
+		background-color: transparent;
+		width: 100%;
+		margin: 0;
+		line-height: 0;
+		display: none;
+	}
+
+	.text-box{
+		background-color: $white;
+		margin: 1em 0;
+	    height: auto;
+
+		@include breakpoint(desktop){
+			margin: 1em;
+		    margin-bottom: 4em;
+		}
+
+		p{
+			font-size: 18px;
+			padding: 2em;
+			color: $text-grey;
+			line-height: 1.6em;
+			font-weight: 100;
+
+			@include breakpoint(tablet){
+				font-size: 22px;
+				padding: 2em;
+			}
+
+			@include breakpoint(desktop){
+				font-size: 24px;
+				padding: 4em;
+			}
+
+			span.accent{
+			    border-top: 1px solid $text-grey;
+			    width: 2em;
+			    display: inline-block;
+			    height: 5px;
+			    margin-left: 0.1em;
+			}
+		}
+	}
+
+	.video-wrapper{
+		img{
+			width: 100%;
+		}
+
+		iframe{
+			width: 100%;
+		    height: 240px;
+
+		    @include breakpoint(mobile){
+		    	height: 350px;
+		    }
+
+		    @include breakpoint(tablet){
+		    	height: 500px;
+		    }
+		}
+	}
+
+	.story-section{
+		padding: 4em 0 0;
+
+		@include breakpoint(tablet){
+			padding: 4em 0;
+		}
+
+		h2{
+			color: $text-grey;}
+
+		p{
+			color: $text-grey;
+		}
+
+		img{
+			display: inline-block;
+			padding: 0 1em;
+			width: 100%;
+
+			@include breakpoint(mobile){
+				padding: 0 2em;
+			}
+
+			@include breakpoint(tablet){
+				padding: 0;
+				width: auto;
+			}
+		}
+
+		hr{
+			border: none;
+			border-bottom: 2px solid #D2D2D2;
+			transition: width 1s ease-in-out 100ms;
+		    -webkit-transition: width 1s ease-in-out 100ms;
+		    width: calc(100% - 2em);
+		    margin: 0 auto;
+
+		    @include breakpoint(mobile){
+		    	width: calc(100% - 4em);
+		    }
+
+		    @include breakpoint(tablet){
+		    	width: 100%;
+		    }
+		}
+
+		.feature-section{
+			padding: 2em 0;
+		    display: inline-block;
+
+			@include breakpoint(tablet){
+				padding: 6em 0;
+				display: block;
+			}
+
+			p, h2{
+			    line-height: 1.5em;
+			    font-weight: 100;
+			}
+
+			h2{
+				font-size: 2em;
+			    line-height: 1.4em;
+			}
+
+			&.right{
+				text-align: left;
+			    padding-bottom: 0;
+
+			    @include breakpoint(tablet){
+			    	padding: inherit;
+			    }
+
+				.col-left{
+					display: block;
+					float: none;
+			    	width: 100%;
+					text-align: center;
+
+				    @include breakpoint(tablet){
+						display: inline-block;
+					    width: 66%;
+					    float: left;
+				    }
+				}
+
+				.col-right{
+				    padding: 0 1em;
+				    display: block;
+				    width: 100%;
+
+				    @include breakpoint(mobile){
+				    	padding: 2em;
+				    }
+
+				    @include breakpoint(tablet){
+					    display: inline-block;
+					    padding: 0 2em;
+					    width: 33%;
+
+					    h2{
+				    	    margin-top: 0;
+					    }
+				    }
+
+				    @include breakpoint(desktop){
+					    display: inline-block;
+					    padding: 3em 0 3em 6em;
+					    width: 33%;
+				    }
+				}
+			}
+
+			&.left{
+				text-align: left;
+				display: table;
+
+				@include breakpoint(tablet){
+					display: inline-block;
+				}
+
+				.col-left{
+					padding: 0 1em;
+				    display: table-footer-group;
+				    width: 100%;
+
+				    p{
+				    	padding: 0 1em;
+
+				    	@include breakpoint(mobile){
+				    		padding: 0 2em;
+				    	}
+				    }
+
+				    h2{
+				    	padding: 0 0.5em;
+
+				    	@include breakpoint(mobile){
+				    		padding: 0 1em;
+				    	}
+
+				    	@include breakpoint(tablet){
+				    		padding-top: 1em;
+				    	}
+				    }
+
+				    @include breakpoint(mobile){
+				    	padding: 2em;
+				    }
+
+				    @include breakpoint(tablet){
+					    display: inline-block;
+					    padding: 0 2em;
+					    width: 33%;
+
+					    h2{
+				    	    margin-top: 0;
+					    }
+				    }
+
+				    @include breakpoint(desktop){
+					    padding: 3em 6em 3em 0;
+					    display: inline-block;
+					    width: 33%;
+
+					    p{
+					    	padding: initial;
+					    }
+
+					    h2{
+					    	padding: initial;
+					    }
+					}
+				}
+
+				.col-right{
+					display: block;
+					width: 100%;
+					float: right;
+					text-align: center;
+
+				    @include breakpoint(tablet){
+						display: inline-block;
+						width: 66%;
+						float: right;
+					}
+				}
+			}
+		}
+	}
+
+	.event-section{
+		background-color: #ffffff;
+		padding: 2em;
+		padding-bottom: 0;
+		display: block;
+		width: 100%;
+
+		&.title{
+			background-color: transparent;
+			width: 100%;
+			padding: 0;
+			padding-bottom: 2em;
+			text-align: left;
+
+			@include breakpoint(mobile){
+				width: 350px;
+				padding: 0;
+			    display: inline-block;
+			}
+
+			@include breakpoint(tablet){
+				width: 100%;
+				padding: 2em 0 0;
+			}
+
+			.col-left{
+			    margin-left: 0;
+
+		    	h2{
+	    		    font-size: 2.5em;
+				    margin: 0 0 1em;
+
+		    		@include breakpoint(mobile){
+		    			font-size: 3em;
+		    			margin: 0;
+		    		}
+		    	}
+
+			    @include breakpoint(mobile){
+			    	margin: 0 auto;
+			    }
+
+			    @include breakpoint(tablet){
+			    	margin-left: 5em;
+			    }
+			}
+
+			.col-right{
+				width: 49%;
+			}
+		}
+
+		@include breakpoint(tablet){
+			padding: 2em;
+			padding-bottom: 0;
+			display: inline-block;
+		}
+
+		.col-left{
+			width: 100%;
+			float: left;
+			padding-bottom: 0;
+
+			@include breakpoint(tablet){
+				width: 50%;
+				padding-bottom: 4em;
+			}
+
+			h2{
+				color: $main-blue;
+				font-size: 2.2em;
+			    font-weight: 100;
+			    line-height: 1.2em;
+
+			    @include breakpoint(mobile){
+			    	font-size: 3em;
+			    }
+
+		    	br{
+		    		display: none;
+
+				    @include breakpoint(tablet){
+				    	display: block;
+			    	}
+			    }
+			}
+		}
+
+		.col-right{
+			width: 100%;
+			float: left;
+			padding-bottom: 1em;
+
+			@include breakpoint(tablet){
+			    width: 35%;
+			    float: right;
+			}
+
+			p{
+				color: $text-grey;
+			    font-size: 1.9em;
+				line-height: 1.2em;
+
+				@include breakpoint(mobile){
+					font-size: 2em;
+				}
+
+				br{
+		    		display:none;
+
+				    @include breakpoint(tablet){
+				    	display: block;
+			    	}
+			    }
+			}
+		}
+	}
+
+	.cta{
+		clear: both;
+		width: calc(100% + 4em);
+		background-color: $main-blue;
+		padding: 1em 0;
+	    margin-left: -2em;
+
+		p{
+			color: $white;
+			text-align: center;
+		    margin: 2px 0;
+	        -webkit-font-smoothing: subpixel-antialiased;
+		}
+
+		a:hover{
+			text-decoration: underline;
+			color: $white;
+		}
+	}
+
+	.third-section{
+		padding: 1em 0 4em;
+		background-color: transparent;
+
+		@include breakpoint(tablet){
+			padding: 6em 0 4em;
+		}
+
+		.col-full{
+			width: 100%;
+		    position: relative;
+		    margin: 5em 0;
+		    display: inline-block;
+
+		    @include breakpoint(tablet){
+		    	margin: 5em 0 10em;
+		    }
+
+			.img-wrapper{
+				text-align: center;
+			    vertical-align: top;
+		        display: inline-block;
+			    position: relative;
+		        width: 100%;
+
+		        @include breakpoint(tablet){
+	        	    width: initial;
+		        }
+
+				img{
+					display: inline-block;
+				}
+			}
+
+			.content-box{
+				background-color: $main-blue;
+			    padding: 2em 3em;
+			    width: 90%;
+			    color: $white;
+		        display: inline-block;
+	            top: 260px;
+			    position: absolute;
+			    right: 0;
+			    left: 0;
+			    margin: 0 auto;
+
+			    @include breakpoint(mobile){
+				    padding: 4em 3em;
+		            top: initial;
+		            bottom: -185px;
+			    }
+
+			    @include breakpoint(tablet){
+				    left: initial;
+				    margin: inherit;
+		            top: 20px;
+				    padding: 8em 4em;
+				    width: 48%;
+				    bottom: initial;
+			    }
+
+				h2{
+					color: $white;
+					line-height: 1.1em;
+					font-size: 2em;
+				}
+
+				p{
+					color: $white;
+				}
+			}
+		}
+
+		.two-col{
+			margin: 16em 0 0;
+			display: table;
+
+			@include breakpoint(tablet){
+				margin: 5em 0;
+				display: inline-block;
+			}
+
+			.col-left{
+				width: 100%;
+				padding: 1em;
+				font-size: 1.5em;
+			    float: left;
+		    	display: table-footer-group;
+
+		    	@include breakpoint(mobile){
+					font-size: 1.7em;
+				}
+
+			    @include breakpoint(tablet){
+			    	display: inline-block;
+			    	width: 50%;
+			    	padding: 1.3em 2em 0 0;
+			    }
+
+				p{
+					color: $text-grey;
+				}
+			}
+
+			.col-right{
+				width: 100%;
+			    display: table-header-group;
+
+				@include breakpoint(tablet){
+					width: 50%;
+					display: inline-block;
+				}
+
+				.img-wrapper{
+					text-align: center;
+
+					img{
+						display: inline-block;
+					}
+				}
+			}
+		}
+
+		.two-col-2{
+			margin: 3em 0;
+			display: inline-block;
+
+			.col-left{
+				width: 100%;
+				display: inline-block;
+				vertical-align: top;
+				float: left;
+
+				@include breakpoint(tablet){
+					width: 50%;
+				}
+
+				.img-wrapper{
+					text-align: center;
+				    float: left;
+				    width: 100%;
+
+				    @include breakpoint(tablet){
+				    	width: initial;
+				    }
+
+					img{
+						display: inline-block;
+					    padding-right: 0;
+
+					    @include breakpoint(tablet){
+					    	padding-right: 2.05em;
+					    }
+					}
+				}
+			}
+
+			.col-right{
+				display: inline-block;
+				width: 100%;
+				padding: 1em 2em;
+				font-size: 1.5em;
+				background-color: $main-purple;
+
+				@include breakpoint(mobile){
+					padding: 4em 2em;
+					font-size: 1.7em;
+				}
+
+				@include breakpoint(tablet){
+					width: 50%;
+				}
+
+				p{
+					color: $white;
+				}
+			}
+		}
+	}
+
+	.fourth-section{
+		background-color: $white;
+
+		.col-full{
+			padding: 4em 2em;
+		    display: inline-block;
+	        width: 100%;
+
+			.col-right{
+				width: 100%;
+				float: left;
+
+				@include breakpoint(tablet){
+					width: 40%;
+				}
+
+				h2{
+					color: $main-blue;
+					font-size: 1.7em;
+				    line-height: 1.1em;
+
+				    @include breakpoint(tablet){
+				    	font-size: 3em;
+				    }
+				}
+			}
+
+			.col-left{
+				width: 100%;
+				float: right;
+
+				@include breakpoint(tablet){
+					width: 55%;
+				}
+
+				p{
+					color: $text-grey;
+				    font-size: 1.5em;
+
+				    @include breakpoint(mobile){
+				    	font-size: 1.7em
+				    }
+				}
+			}
+		}
+
+		.countdown-timer{
+			text-align: center;
+
+			p{
+			    color: $white;
+			}
+
+			p.numbers{
+				font-size: 3em;
+				font-weight: 400;
+				line-height: 1.5em;
+				margin: 0 0 -10px;
+			}
+
+			p.words{
+				font-size: 1.5em;
+				font-weight: 100;
+			    margin-top: -10px;
+			}
+
+			.wrapper-timer{
+				display: inline-block;
+				text-align: left;
+				margin-bottom: 5em;
+				position: relative;
+				right: -5%;
+
+				@include breakpoint(mobile){
+					position: initial;
+					left: initial;
+					margin-bottom: 0;
+				}
+
+				div{
+					padding: 1em;
+				    float: left;
+				    margin-right: 1.5em;
+			        width: 150px;
+				    height: 150px;
+				    margin-top: 1em;
+
+				    @include breakpoint(mobile){
+				    	margin: 1em auto 0;
+				    	float: none;
+				        width: 200px;
+					    height: 200px;
+				    }
+
+				    @include breakpoint(tablet){
+				    	float: left;
+				    	margin: 1em 1em 0 0;
+				    }
+
+					&:last-child{
+						margin-left: 0;
+					}
+				}
+
+				.days{
+					background-color: $main-blue;
+				}
+				.hours{
+					background-color: $main-yellow;
+					position: relative;
+					top: -40px;
+					right: -50px;
+
+					@include breakpoint(mobile){
+						position: initial;
+						top: initial;
+						right: initial;
+					}
+				}
+				.minutes{
+					background-color: $main-red;
+				    position: relative;
+				    top: -80px;
+				    right: -100px;
+
+					@include breakpoint(mobile){
+						position: initial;
+						top: initial;
+						right: initial;
+					}
+				}
+			}
+		}
+
+		.cta{
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+
+	.fifth-section{
+		padding: 8em 0;
+		display: inline-block;
+		text-align: center;
+
+		.col-left{
+			background-color: $main-green;
+			float: none;
+			display: inline-block;
+			padding: 4em 2.8em;
+			width: 260px;
+			height: 290px;
+			text-align: left;
+
+			@include breakpoint(mobile){
+				padding: 6em 2.8em;
+				width: 380px;
+				height: 380px;
+			}
+
+			@include breakpoint(tablet){
+				width: 40%;
+				float: left;
+			}
+
+			p{
+				color: $white;
+				font-size: 1.9em;
+			}
+
+			span.accent{
+			    border-top: 1px solid $white;
+			    width: 2em;
+			    display: inline-block;
+			    height: 10px;
+			    margin-left: 0.1em;
+			}
+		}
+
+		.col-right{
+			width: 75%;
+			display: inline-block;
+			float: right;
+			margin-top: 5em;
+			text-align: center;
+
+			@include breakpoint(mobile){
+				width: 80%;
+				margin-right: 1.7em;
+			}
+
+			@include breakpoint(tablet){
+				width: 45%;
+				margin-top: initial;
+				text-align: initial;
+			}
+
+			ul{
+				counter-reset: new-counter;
+				list-style-type: none;
+
+				li{
+					font-size: 1.5em;
+					border: none;
+					border-bottom: 1px solid $light-grey;
+					color: $text-grey;
+					padding: 3.3em 0;
+					text-align: left;
+
+					@include breakpoint(tablet){
+						font-size: 1.7em;
+					}
+
+					&:before{
+						font-size: 2.2em;
+						content: counter(new-counter);
+						counter-increment: new-counter;
+						color: $main-green;
+						position: absolute;
+						margin-left: -1em;
+						margin-top: 0.2em;
+					}
+
+					&:first-child{
+						border-top: none;
+						margin-top: 0;
+					    padding-top: 1em;
+
+						@include breakpoint(tablet){
+							border-top: 1px solid $light-grey;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.sixth-section{
+		padding: 6em 0;
+		display: block;
+	    overflow: auto;
+	    text-align: center;
+	    overflow: hidden;
+
+	    @include breakpoint(tablet){
+	    	padding: 3em 0;
+	    }
+
+		.col-full{
+			text-align: center;
+
+			.related-article-wrapper{
+				margin: 0 auto;
+				width: 100%;
+				height: auto;
+				font-size: 0;
+
+				@include breakpoint(mobile){
+					width: 350px;
+				}
+
+				@include breakpoint(tablet){
+					width: 791px;
+					height: 345px;
+				}
+
+				.col-left{
+					width: 100%;
+					float: left;
+
+					@include breakpoint(tablet){
+						width: 350px;
+					}
+
+					@include breakpoint(tablet){
+						width: 491px;
+					}
+				}
+
+				.col-right{
+					font-size: initial;
+					width: 100%;
+					float: left;
+					height: auto;
+					background-color: $main-purple;
+					padding: 3em 3.5em;
+					text-align: left;
+
+					@include breakpoint(tablet){
+						width: 350px;
+					}
+
+					@include breakpoint(tablet){
+						width: 300px;
+						height: 100%;
+						padding: 5em 3.5em;
+					}
+
+					h2, p{
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+}
